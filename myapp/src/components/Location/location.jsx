@@ -1,6 +1,9 @@
 import React,{useState} from 'react'
 import {useDispatch} from 'react-redux'
 import {changeLocation} from '../../features/location'
+import {  Input ,Space} from 'antd';
+import './location.css'
+ 
 
 
 function Location() {
@@ -8,7 +11,7 @@ function Location() {
     const dispatch=useDispatch();
 
 function getLocation(e){
-dispatch(changeLocation(e.target.value))
+dispatch(changeLocation(e))
 }
 
 
@@ -17,11 +20,16 @@ dispatch(changeLocation(e.target.value))
     <>
     
     <div className='location_container'>
-
-        <input type='text' onChange={getLocation}></input>
-
-        <p>ggg</p>
-
+      <Space>
+        <Input.Search
+      placeholder="input search text"
+      allowClear
+      onSearch={getLocation}
+      style={{
+        width: 200,
+      }}
+    />
+    </Space>
     </div>
 
     </>

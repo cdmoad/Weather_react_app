@@ -1,14 +1,15 @@
 
 import './App.css';
 import Location from './components/Location/location'
+import Weather from './components/Weather/weather';
 
 function App() {
 
 
   return (
     <div className="App">
-      <p>hhh</p>
       <Location/>
+      <Weather/>
     </div>
   );
   
