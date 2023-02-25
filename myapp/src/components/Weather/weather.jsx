@@ -55,13 +55,13 @@ function Weather() {
         image={weather.clouds>50 ? cloudy : sunny}
         title="green iguana"
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+      <CardContent >
+        <Typography className="city_name" gutterBottom variant="h5" component="div">
           {location}
         </Typography>
         <Typography variant="body2" color="text.secondary">
 
-        <List
+        <List className="weather_list"
       sx={{
         width: '100%',
         maxWidth: 360,

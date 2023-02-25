@@ -35,12 +35,12 @@ axios.get(`http://api.weatherapi.com/v1/current.json?key=f67a41e8f3044a54bac1408
     
     <div className='location_container'>
       <Space>
-        <Input.Search
+        <Input.Search 
       placeholder="input search text"
       allowClear
       onSearch={getLocation}
       style={{
-        width: 200,
+        width: 250,
       }}
     />
     </Space>
