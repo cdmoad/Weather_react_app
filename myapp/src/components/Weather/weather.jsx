@@ -49,7 +49,6 @@ function Weather() {
 <Card className="weather_card" sx={{ width: 445 }}>
   {location=="city" ? <Alert severity="info">No such city found</Alert> : null}
 
-
       <CardMedia
         sx={{ height: 240 }}
         image={weather.clouds>50 ? cloudy : sunny}
@@ -58,7 +57,9 @@ function Weather() {
       <CardContent >
         <Typography className="city_name" gutterBottom variant="h5" component="div">
           {location}
+         
         </Typography>
+         <img src={weather.icon}/>
         <Typography variant="body2" color="text.secondary">
 
         <List className="weather_list"

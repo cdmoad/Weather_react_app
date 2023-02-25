@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import {useDispatch} from 'react-redux'
 import {changeLocation} from '../../features/location'
-import {setTemp,setHumidity,setWind,setClouds} from '../../features/weather'
+import {setTemp,setHumidity,setWind,setClouds,setIcon} from '../../features/weather'
 import {  Input ,Space} from 'antd';
 import './location.css'
 import axios from 'axios'
@@ -24,6 +24,8 @@ axios.get(`http://api.weatherapi.com/v1/current.json?key=f67a41e8f3044a54bac1408
    dispatch(setWind(response.data.current.wind_kph))
    dispatch(setHumidity(response.data.current.humidity))
    dispatch(setClouds(response.data.current.cloud))
+   dispatch(setIcon(response.data.current.condition.icon))
+
 }).catch(err=>{console.warn("No such city found")  
           dispatch(changeLocation("city"))})
 }
