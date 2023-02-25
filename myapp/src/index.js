@@ -11,12 +11,14 @@ import { Provider } from "react-redux";//to make the store accessible to all com
 
 //importing reducers
 import locationReducer from "./features/location"
+import weatherReducer from './features/weather';
  
 
 //configuring the store
 const store = configureStore({
   reducer: {
-    location:locationReducer,  
+    location:locationReducer, 
+    weather:weatherReducer
   },
 });
 
