@@ -1,7 +1,8 @@
-
+import React from 'react';
 import './App.css';
 import Location from './components/Location/location'
 import Weather from './components/Weather/weather';
+
 
 function App() {
 
