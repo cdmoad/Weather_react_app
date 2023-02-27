@@ -17,7 +17,7 @@ function Location() {
 
 function getLocation(e){
 dispatch(changeLocation(e))
-axios.get(`http://api.weatherapi.com/v1/current.json?key=f67a41e8f3044a54bac140811232502&q=${e}&aqi=no`)
+axios.get(`https://api.weatherapi.com/v1/current.json?key=f67a41e8f3044a54bac140811232502&q=${e}&aqi=no`)
 .then((response)=>{
   console.log(response.data)
    dispatch(setTemp(response.data.current.temp_c))
